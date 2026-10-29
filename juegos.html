@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f2ae3d" />
+  <title>La Tribu Gamer | Scratch y App Inventor</title>
+  <meta name="description" content="La Tribu Gamer: proyectos creados con Scratch y MIT App Inventor." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="juegos.css" />
+  <script src="juegos.js" defer></script>
+</head>
+<body>
+  <main id="projectPicker" class="project-picker" aria-label="Elegí un proyecto">
+    <button class="project-side scratch-side" type="button" data-project="scratch" aria-label="Abrir los proyectos de Scratch">
+      <span class="project-orb" aria-hidden="true"><span class="orb-face scratch-orb"><span class="scratch-wordmark">scratch<span class="scratch-dot">.</span></span></span></span>
+    </button>
+    <button class="project-side inventor-side" type="button" data-project="inventor" aria-label="Abrir el proyecto de App Inventor">
+      <span class="project-orb" aria-hidden="true"><span class="orb-face inventor-orb"><span class="inventor-wordmark">App Inventor</span></span></span>
+    </button>
+    <button class="project-side pseint-side" type="button" data-project="pseint" aria-label="Abrir los proyectos de PSeInt">
+      <span class="project-orb" aria-hidden="true"><span class="orb-face pseint-orb"><span class="pseint-wordmark">PSeInt</span></span></span>
+    </button>
+    <span class="visually-hidden">Elegí Scratch, App Inventor o PSeInt para ver los proyectos.</span>
+  </main>
+
+  <section id="projectDetail" class="detail-view" aria-labelledby="detailTitle" hidden>
+    <button id="backButton" class="back-button" type="button"><span aria-hidden="true">←</span> Volver</button>
+    <div class="detail-layout">
+      <div class="detail-copy">
+        <p id="detailEyebrow" class="detail-eyebrow"></p>
+        <h1 id="detailTitle"></h1>
+        <p id="detailDescription" class="detail-description"></p>
+      </div>
+      <div id="projectSlots" class="project-slots" aria-label="Proyectos" aria-live="polite" hidden></div>
+    </div>
+  </section>
+</body>
+</html>
